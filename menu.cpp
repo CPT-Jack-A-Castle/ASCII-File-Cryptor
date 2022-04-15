@@ -1,0 +1,73 @@
+﻿#include <iostream>
+#include "menu.h"
+#include "cryptor.h"
+#include "animation.h"
+
+cryptor CryptorMenuObj;
+animation AnimationMenuObj;
+
+void menu::ShowMenu() {
+	std::cout << "1. Mã hoá file\n";
+	std::cout << "2. Giải mã file\n";
+	std::cout << "3. Thoát chương trình";
+	std::cout << std::endl;
+}
+
+int menu::SelectOption() {
+	int i;
+	bool ValidOption = false;
+	while (ValidOption == false) {
+		system("cls");
+		ShowMenu();
+		std::cout << std::endl;
+		std::cout << "Nhập lựa chọn: ";
+		std::cin >> i;
+		if (i > 0 && i < 4) {
+			ValidOption = true;
+		}
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
+	}
+	return i;
+}
+
+void menu::ProcessOption(int option) {
+	switch (option) {
+	case 1: {
+		system("cls");
+		ShowMenu();
+		std::cout << std::endl;
+		std::string filename;
+		int pin;
+		std::cout << "Nhập tên file: ";
+		std::cin >> filename;
+		std::cout << "Nhập pin mã hoá: ";
+		std::cin >> pin;
+		CryptorMenuObj.Encrypt(filename, pin);
+		break; 
+	}
+	case 2: {
+		system("cls");
+		ShowMenu();
+		std::cout << std::endl;
+		std::string filename;
+		int pin;
+		std::cout << "Nhập tên file: ";
+		std::cin >> filename;
+		std::cout << "Nhập pin mã hoá: ";
+		std::cin >> pin;
+		CryptorMenuObj.Decrypt(filename, pin);
+		break; 
+	}
+	case 3:
+		system("cls");
+		ShowMenu();
+		std::cout << std::endl;
+		std::cout << "Đang thoát chương trình ";
+		AnimationMenuObj.DotAnimation(100);
+		exit(0);
+		break;
+	default:
+		break;
+	}
+}
