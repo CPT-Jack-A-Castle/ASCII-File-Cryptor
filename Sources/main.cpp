@@ -2,9 +2,9 @@
 #include <fstream>
 #include <string>
 #include <Windows.h>
-#include "menu.h"
-#include "cryptor.h"
-#include "animation.h"
+#include "../Sources/Headers/menu.h"
+#include "../Sources/Headers/cryptor.h"
+#include "../Sources/Headers/animation.h"
 
 menu MenuMainObj;
 

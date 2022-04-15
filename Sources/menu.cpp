@@ -1,7 +1,7 @@
 ﻿#include <iostream>
-#include "menu.h"
-#include "cryptor.h"
-#include "animation.h"
+#include "../Sources/Headers/menu.h"
+#include "../Sources/Headers/cryptor.h"
+#include "../Sources/Headers/animation.h"
 
 cryptor CryptorMenuObj;
 animation AnimationMenuObj;

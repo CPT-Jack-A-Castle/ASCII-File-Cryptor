@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <fstream>
-#include "cryptor.h"
-#include "animation.h"
+#include "../Sources/Headers/cryptor.h"
+#include "../Sources/Headers/animation.h"
 
 animation AnimationCryptorObj;
 
