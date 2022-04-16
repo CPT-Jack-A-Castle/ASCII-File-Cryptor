@@ -3,11 +3,13 @@
 #include "../Sources/Headers/cryptor.h"
 #include "../Sources/Headers/animation.h"
 
+/*	Tạo object từ classes (Create object from classes)	*/
 animation AnimationCryptorObj;
 
+/*	Định nghĩa các hàm class 'cryptor' (Define 'cryptor' class functions)	*/
 void cryptor::Encrypt(std::string filename, int pin) {
 	char i;
-	std::fstream InputFile, TemporyFile;
+	std::fstream InputFile, TemporyFile;	
 	InputFile.open(filename, std::fstream::in);
 	if (!InputFile) {
 		std::cout << "Không tìm thấy hoặc không thể truy cập file ";

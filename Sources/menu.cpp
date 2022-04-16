@@ -3,9 +3,12 @@
 #include "../Sources/Headers/cryptor.h"
 #include "../Sources/Headers/animation.h"
 
+
+/*	Tạo object từ classes (Create object from classes)	*/
 cryptor CryptorMenuObj;
 animation AnimationMenuObj;
 
+/*	Định nghĩa các hàm class 'menu' (Define 'menu' class functions)	*/
 void menu::ShowMenu() {
 	std::cout << "1. Mã hoá file\n";
 	std::cout << "2. Giải mã file\n";

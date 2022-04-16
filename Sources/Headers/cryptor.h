@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 class cryptor {
 private:
 
@@ -9,6 +9,7 @@ public:
 	~cryptor() {
 		//	Destructor
 	}
+	/*	Khai báo hàm mẫu (Declare function prototypes)	*/
 	void Encrypt(std::string filename, int pin);
 	void Decrypt(std::string filename, int pin);
 };

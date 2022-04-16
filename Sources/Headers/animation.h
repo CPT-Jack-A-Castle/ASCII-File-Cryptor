@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 class animation {
 private:
 
@@ -9,6 +9,7 @@ public:
 	~animation() {
 		//	Destructor
 	}
+	/*	Khai báo hàm mẫu (Declare function prototypes)	*/
 	void DotAnimation(int milliseconds);
 };
 
