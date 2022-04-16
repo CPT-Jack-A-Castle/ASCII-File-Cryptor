@@ -39,6 +39,10 @@ void menu::ProcessOption(int option) {
 		std::cout << std::endl;
 		std::string filename;
 		int pin;
+		std::cout << "# Backup file gốc trước khi mã hoá tránh lỗi.\n";
+		std::cout << "# Mã PIN phải là số nguyên (ví dụ: 9595)\n";
+		std::cout << "# Mã hoá lại với số PIN thấp hơn nếu file bị lỗi và không thể giải mã\n";
+		std::cout << std::endl;
 		std::cout << "Nhập tên file: ";
 		std::cin >> filename;
 		std::cout << "Nhập pin mã hoá: ";

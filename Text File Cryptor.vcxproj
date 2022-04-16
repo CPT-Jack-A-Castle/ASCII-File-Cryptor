@@ -25,9 +25,16 @@
     <ClCompile Include="Sources\menu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Sources\Headers\animation.h" />
     <ClInclude Include="Sources\Headers\cryptor.h" />
     <ClInclude Include="Sources\Headers\menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Text File Cryptor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Sources\Resources\encryption.ico" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -12,12 +12,16 @@ void cryptor::Encrypt(std::string filename, int pin) {
 	if (!InputFile) {
 		std::cout << "Không tìm thấy hoặc không thể truy cập file ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	TemporyFile.open("process", std::fstream::out);
 	if (!TemporyFile) {
 		std::cout << "Không thể tạo file tạm thời ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	while (InputFile >> std::noskipws >> i) {
@@ -30,12 +34,16 @@ void cryptor::Encrypt(std::string filename, int pin) {
 	if (!InputFile) {
 		std::cout << "Không tìm thấy hoặc không thể truy cập file ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	TemporyFile.open("process", std::fstream::in);
 	if (!TemporyFile) {
 		std::cout << "Không thể tạo file tạm thời ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	while (TemporyFile >> std::noskipws >> i) {
@@ -57,12 +65,16 @@ void cryptor::Decrypt(std::string filename, int pin) {
 	if (!InputFile) {
 		std::cout << "Không tìm thấy hoặc không thể truy cập file ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	TemporyFile.open("process.txt", std::fstream::out);
 	if (!TemporyFile) {
 		std::cout << "Không thể tạo file tạm thời ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	while (InputFile >> std::noskipws >> i) {
@@ -75,12 +87,18 @@ void cryptor::Decrypt(std::string filename, int pin) {
 	if (!InputFile) {
 		std::cout << "Không tìm thấy hoặc không thể truy cập file ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	TemporyFile.open("process.txt", std::fstream::in);
 	if (!TemporyFile) {
 		std::cout << "Không thể tạo file tạm thời ";
 		AnimationCryptorObj.DotAnimation(500);
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		goto escape;
 	}
 	while (TemporyFile >> std::noskipws >> i) {
