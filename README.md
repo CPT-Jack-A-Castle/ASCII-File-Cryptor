@@ -1,5 +1,5 @@
-# Text File Cryptor
-Crypt simple text files
+# ASCII File Cryptor
+Crypt file using ASCII
  
 Compiler: Visual Studio 2022
 
@@ -16,3 +16,4 @@ VS Project Configurations:
 
 Executables:
 - The target file must be located in the same directory as the executable file to be found.
+- The target file can't have spaces in it or it won't be found (✓ "cryptdizfile.zip", ☓ "crypt diz file.zip").
