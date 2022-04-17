@@ -11,7 +11,7 @@ animation AnimationCryptorObj;
 timer TimerCryptorObj;
 
 /*	Định nghĩa các hàm class 'cryptor' (Define 'cryptor' class functions)	*/
-void cryptor::Encrypt(std::string filename, int pin) {
+void cryptor::Encrypt(std::string filename, long long int pin) {
 	TimerCryptorObj.Start();
 	char i;
 	std::string OriginalFileName = filename;
@@ -53,7 +53,7 @@ escape:
 	std::cout << "";
 }
 
-void cryptor::Decrypt(std::string filename, int pin) {
+void cryptor::Decrypt(std::string filename, long long int pin) {
 	TimerCryptorObj.Start();
 	char i;
 	std::string OriginalFileName = filename;

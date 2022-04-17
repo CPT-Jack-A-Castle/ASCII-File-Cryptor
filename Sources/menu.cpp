@@ -41,7 +41,7 @@ void menu::ProcessOption(int option) {
 		ShowMenu();
 		std::cout << std::endl;
 		std::string filename;
-		int pin;
+		long long int pin;
 		std::cout << "# Backup file gốc trước khi mã hoá tránh lỗi.\n";
 		std::cout << "# Mã PIN phải là số nguyên (ví dụ: 9595)\n";
 		std::cout << "# Mã hoá lại với số PIN thấp hơn nếu file bị lỗi và không thể giải mã\n";
@@ -58,7 +58,7 @@ void menu::ProcessOption(int option) {
 		ShowMenu();
 		std::cout << std::endl;
 		std::string filename;
-		int pin;
+		long long int pin;
 		std::cout << "# Backup file gốc trước khi giải mã tránh lỗi hoặc để thử lại nếu nhập sai mã.\n";
 		std::cout << "# Nhập sai mã PIN sẽ dẫn tới file hỏng hoàn toàn\n";
 		std::cout << std::endl;

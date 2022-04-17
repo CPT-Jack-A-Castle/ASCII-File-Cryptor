@@ -10,7 +10,7 @@ public:
 		//	Destructor
 	}
 	/*	Khai báo hàm mẫu (Declare function prototypes)	*/
-	void Encrypt(std::string filename, int pin);
-	void Decrypt(std::string filename, int pin);
+	void Encrypt(std::string filename, long long int pin);
+	void Decrypt(std::string filename, long long int pin);
 };
 
