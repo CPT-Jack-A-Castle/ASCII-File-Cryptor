@@ -4,17 +4,16 @@
 #include <Windows.h>
 #include "../Sources/Headers/cryptor.h"
 #include "../Sources/Headers/animation.h"
+#include "../Sources/Headers/timer.h"
 
 /*	Tạo object từ classes (Create object from classes)	*/
 animation AnimationCryptorObj;
+timer TimerCryptorObj;
 
 /*	Định nghĩa các hàm class 'cryptor' (Define 'cryptor' class functions)	*/
 void cryptor::Encrypt(std::string filename, int pin) {
-	DWORD dw1;
-	DWORD dw2;
-	double dw3;
+	TimerCryptorObj.Start();
 	char i;
-	dw1 = GetTickCount64();
 	std::string OriginalFileName = filename;
 	std::string TempData;
 	std::ifstream InputFile(filename, std::ios::binary);
@@ -47,21 +46,16 @@ void cryptor::Encrypt(std::string filename, int pin) {
 	CryptFile.close();
 	system(("del /f " + OriginalFileName).c_str());
 	system(("ren crypting " + OriginalFileName).c_str());
-	dw2 = GetTickCount64();
-	dw3 = dw2 - dw1;
-	dw3 = dw3 / 1000;
-	std::cout << "Quá trình mã hoá tốn " << dw3 << " giây." << std::endl;
+	TimerCryptorObj.End();
+	TimerCryptorObj.Calc();
 	system("pause");
 escape:
 	std::cout << "";
 }
 
 void cryptor::Decrypt(std::string filename, int pin) {
-	DWORD dw1;
-	DWORD dw2;
-	double dw3;
+	TimerCryptorObj.Start();
 	char i;
-	dw1 = GetTickCount64();
 	std::string OriginalFileName = filename;
 	std::string TempData;
 	std::ifstream InputFile(filename, std::ios::binary);
@@ -94,10 +88,8 @@ void cryptor::Decrypt(std::string filename, int pin) {
 	DecryptFile.close();
 	system(("del /f " + OriginalFileName).c_str());
 	system(("ren decrypting " + OriginalFileName).c_str());
-	dw2 = GetTickCount64();
-	dw3 = dw2 - dw1;
-	dw3 = dw3 / 1000;
-	std::cout << "Quá trình giải mã tốn " << dw3 << " giây." << std::endl;
+	TimerCryptorObj.End();
+	TimerCryptorObj.Calc();
 	system("pause");
 escape:
 	std::cout << "";

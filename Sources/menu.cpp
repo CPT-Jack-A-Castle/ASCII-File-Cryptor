@@ -59,6 +59,9 @@ void menu::ProcessOption(int option) {
 		std::cout << std::endl;
 		std::string filename;
 		int pin;
+		std::cout << "# Backup file gốc trước khi giải mã tránh lỗi hoặc để thử lại nếu nhập sai mã.\n";
+		std::cout << "# Nhập sai mã PIN sẽ dẫn tới file hỏng hoàn toàn\n";
+		std::cout << std::endl;
 		std::cout << "Nhập tên file: ";
 		std::cin >> filename;
 		std::cout << "Nhập pin mã hoá: ";

@@ -23,15 +23,17 @@
     <ClCompile Include="Sources\cryptor.cpp" />
     <ClCompile Include="Sources\main.cpp" />
     <ClCompile Include="Sources\menu.cpp" />
+    <ClCompile Include="Sources\timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sources\Headers\animation.h" />
     <ClInclude Include="Sources\Headers\cryptor.h" />
     <ClInclude Include="Sources\Headers\menu.h" />
+    <ClInclude Include="Sources\Headers\timer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Text File Cryptor.rc" />
+    <ResourceCompile Include="ASCII File Cryptor.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Sources\Resources\encryption.ico" />
@@ -40,9 +42,9 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{c45101b9-67da-4c1b-be07-f7285bb75eba}</ProjectGuid>
-    <RootNamespace>Text File Cryptor</RootNamespace>
+    <RootNamespace>ASCII File Cryptor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Text File Cryptor</ProjectName>
+    <ProjectName>ASCII File Cryptor</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -151,6 +153,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
