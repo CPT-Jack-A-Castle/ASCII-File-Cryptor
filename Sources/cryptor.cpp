@@ -2,9 +2,12 @@
 #include <string>
 #include <fstream>
 #include <Windows.h>
+#include <mmsystem.h>
 #include "../Sources/Headers/cryptor.h"
 #include "../Sources/Headers/animation.h"
 #include "../Sources/Headers/timer.h"
+#include "../resource.h"
+
 
 /*	Tạo object từ classes (Create object from classes)	*/
 animation AnimationCryptorObj;
@@ -48,6 +51,7 @@ void cryptor::Encrypt(std::string filename, long long int pin) {
 	system(("ren crypting " + OriginalFileName).c_str());
 	TimerCryptorObj.End();
 	TimerCryptorObj.Calc();
+	PlaySound(MAKEINTRESOURCE(IDR_WAVE1), NULL, SND_RESOURCE | SND_SYNC);
 	system("pause");
 escape:
 	std::cout << "";
@@ -90,6 +94,7 @@ void cryptor::Decrypt(std::string filename, long long int pin) {
 	system(("ren decrypting " + OriginalFileName).c_str());
 	TimerCryptorObj.End();
 	TimerCryptorObj.Calc();
+	PlaySound(MAKEINTRESOURCE(IDR_WAVE1), NULL, SND_RESOURCE | SND_SYNC);
 	system("pause");
 escape:
 	std::cout << "";
