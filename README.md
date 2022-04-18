@@ -13,6 +13,7 @@ Needs:
 
 VS Project Configurations:
 1. C/C++ → Command Line → Additional Options → Add "/utf-8".
+2. Linker → Input → Additional Dependencies → Add "winmm.lib".
 
 Executables:
 - The target file must be located in the same directory as the executable file to be found.
