@@ -15,6 +15,7 @@ timer TimerCryptorObj;
 
 /*	Định nghĩa các hàm class 'cryptor' (Define 'cryptor' class functions)	*/
 void cryptor::Encrypt(std::string filename, long long int pin) {
+	SetConsoleTitle(L"ASCII File Cryptor - Encrypting");
 	TimerCryptorObj.Start();
 	char i;
 	std::string OriginalFileName = filename;
@@ -52,12 +53,14 @@ void cryptor::Encrypt(std::string filename, long long int pin) {
 	TimerCryptorObj.End();
 	TimerCryptorObj.Calc();
 	PlaySound(MAKEINTRESOURCE(IDR_WAVE1), NULL, SND_RESOURCE | SND_SYNC);
+	SetConsoleTitle(L"ASCII File Cryptor");
 	system("pause");
 escape:
 	std::cout << "";
 }
 
 void cryptor::Decrypt(std::string filename, long long int pin) {
+	SetConsoleTitle(L"ASCII File Cryptor - Decrypting");
 	TimerCryptorObj.Start();
 	char i;
 	std::string OriginalFileName = filename;
@@ -95,6 +98,7 @@ void cryptor::Decrypt(std::string filename, long long int pin) {
 	TimerCryptorObj.End();
 	TimerCryptorObj.Calc();
 	PlaySound(MAKEINTRESOURCE(IDR_WAVE1), NULL, SND_RESOURCE | SND_SYNC);
+	SetConsoleTitle(L"ASCII File Cryptor");
 	system("pause");
 escape:
 	std::cout << "";
